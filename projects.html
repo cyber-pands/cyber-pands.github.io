@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | CyberPands</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png">
+
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Projects-specific styles -->
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+
+<body>
+  <div id="bg-grid"></div>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+
+  <div class="projects-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="projects-sidebar">
+      <h3>Projects</h3>
+      <div class="sidebar-separator"></div>
+
+      <div class="folder">
+        <div class="folder-title" onclick="toggleFolder(this)">
+          Threat Intelligence
+        </div>
+        <ul class="folder-items">
+          <li onclick="loadProject('threatintel_pcap_threathunt')">PCAPThreatHunter</li>
+        </ul>
+      </div>
+
+      <div class="folder" id="siem">
+        <div class="folder-title" onclick="toggleFolder(this)">
+          SIEM
+        </div>
+        <ul class="folder-items">
+          <li onclick="loadProject('siem_wazuh')">Wazuh Home Lab</li>
+        </ul>
+      </div>
+
+      <div class="folder">
+        <div class="folder-title" onclick="toggleFolder(this)">
+          Endpoint Security
+        </div>
+        <ul class="folder-items">
+          <li onclick="loadProject('endps_secureguard')">SecureGuard</li>
+        </ul>
+      </div>
+
+      <div class="folder">
+        <div class="folder-title" onclick="toggleFolder(this)">
+          Network Security
+        </div>
+        <ul class="folder-items">
+          <li onclick="loadProject('nts_recon')">Auto-Recon</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="projects-main">
+  <main class="projects-content" id="projects-content">
+    <!-- DEFAULT VIEW -->
+    <h1>Projects</h1>
+    <p class="muted intro">
+      A collection of hands-on cybersecurity projects focused on
+      practical learning, real-world scenarios, and clear documentation.
+    </p>
+
+    <!-- Domains -->
+    <div class="domain-list">
+      <div>
+        <strong>Threat Intelligence</strong>
+        <span class="muted">
+          Analyzing indicators, alert context, and attacker behavior to support detection and response.
+        </span>
+      </div>
+
+      <div>
+        <strong>SIEM</strong>
+        <span class="muted">
+          Working with security logs to investigate events, tune alerts, and reduce noise.
+        </span>
+      </div>
+
+      <div>
+        <strong>Endpoint Security</strong>
+        <span class="muted">
+          Investigating endpoint activity, process behavior, and artifacts during security incidents.
+        </span>
+      </div>
+
+      <div>
+        <strong>Network Security</strong>
+        <span class="muted">
+          Inspecting network traffic and PCAP data to identify suspicious patterns and anomalies.
+        </span>
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="tag-cloud">
+      <span class="tag">SOC</span>
+      <span class="tag">SIEM</span>
+      <span class="tag">Web</span>
+      <span class="tag">Python</span>
+      <span class="tag">PCAP</span>
+      <span class="tag">Detection</span>
+    </div>
+
+    <p class="hint">
+      Select a project from the sidebar to view details.
+    </p>
+  </main>
+
+  <footer class="projects-footer">
+    © 2026 CyberPands
+  </footer>
+</div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/include.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog | CyberPands</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png">
+
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+</head>
+
+<body>
+  <!-- Header -->
+   <div id="bg-grid"></div>
+  <div id="header-placeholder"></div>
+
+  <div class="blog-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="blog-sidebar">
+      <h3>Write-ups</h3>
+      <div class="sidebar-separator"></div>
+
+      <div class="sidebar-group">
+        <div class="group-title" onclick="toggleGroup(this)">TryHackMe</div>
+        <ul class="group-items">
+          <li onclick="filterBlogs('thm-x')">Coming Soon ...</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="group-title" onclick="toggleGroup(this)">Fundamentals</div>
+        <ul class="group-items">
+          <li onclick="filterBlogs('fund-TRV')">Threats, Risks & Vulnerabilities</li>
+          <li onclick="filterBlogs('fund-commonattack')">Common Cyber Attacks</li>
+          <li onclick="filterBlogs('fund-cybegin')">Cyber Security for Beginners</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="group-title" onclick="toggleGroup(this)">Web Security</div>
+        <ul class="group-items">
+          <li onclick="filterBlogs('web-injection')">Injection Attacks</li>
+          <li onclick="filterBlogs('web-crypto')">Cryptographic Failure</li>
+          <li onclick="filterBlogs('web-brokenaccess')">Broken Access Control</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="group-title" onclick="toggleGroup(this)">SOC & Blue Team</div>
+        <ul class="group-items">
+          <li onclick="filterBlogs('soc-siem')">Wazuh SIEM Detection</li>
+        </ul>
+      </div>
+  </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="blog-content">
+
+      <h1>Blog & Write-ups</h1>
+
+      <p class="intro muted">
+        Short, practical write-ups highlighting what I learn while exploring
+        cybersecurity concepts, labs, and real-world scenarios.
+        Full articles are published on Medium.
+      </p>
+
+      <!-- BLOG LIST -->
+      <div class="blog-list">
+
+        <article class="blog-card" data-category="web-injection">
+          <h2>The Danger Lurking Within: Understanding Injection Attacks</h2>
+
+          <div class="blog-meta">
+            Web Security · OWASP
+          </div>
+
+          <p class="blog-summary">
+            An in-depth look at injection vulnerabilities in web applications,
+            explaining how untrusted input can be exploited and why injection
+            remains one of the most critical web security risks.
+          </p>
+
+          <ul class="blog-takeaways">
+            <li>User input must never be trusted by default</li>
+            <li>Injection flaws often stem from improper validation and sanitisation</li>
+            <li>Secure coding practices significantly reduce attack surface</li>
+          </ul>
+
+          <a
+            href="https://cyberpands.medium.com/the-danger-lurking-within-understanding-injection-attacks-on-web-applications-88b722a2a428"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+
+        <article class="blog-card" data-category="web-crypto">
+          <h2>Cryptographic Failures In Depth</h2>
+
+          <div class="blog-meta">
+            Web Security · OWASP
+          </div>
+
+          <p class="blog-summary">
+            A detailed exploration of cryptographic failures, focusing on how weak
+            encryption, poor key management, and insecure implementations expose
+            sensitive data.
+          </p>
+
+          <ul class="blog-takeaways">
+            <li>Encryption is only as strong as its implementation</li>
+            <li>Poor key handling can nullify secure algorithms</li>
+            <li>Misconfigurations are a common cause of data exposure</li>
+          </ul>
+
+          <a
+            href="https://cyberpands.medium.com/cryptographic-failures-in-depth-ec783dfb2850"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+        <article class="blog-card" data-category="web-brokenaccess">
+          <h2>Broken Access Control Explained In Depth</h2>
+
+          <div class="blog-meta">
+            Web Security · OWASP
+          </div>
+
+          <p class="blog-summary">
+            An analysis of broken access control vulnerabilities, showing how
+            improper authorization checks allow attackers to access restricted
+            functionality and sensitive data.
+          </p>
+
+          <ul class="blog-takeaways">
+            <li>Authentication does not guarantee proper authorization</li>
+            <li>Access control must be enforced on the server side</li>
+            <li>Privilege escalation is a common outcome of poor access control</li>
+          </ul>
+
+          <a
+            href="https://cyberpands.medium.com/broken-access-control-in-depth-9c1f2a9e2b93"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+        <article class="blog-card" data-category="fund-TRV">
+          <h2>Threats, Risks, and Vulnerabilities Explained</h2>
+
+          <div class="blog-meta">
+            Fundamentals · Cybersecurity Concepts
+          </div>
+
+          <p class="blog-summary">
+            A clear explanation of the difference between threats, risks, and
+            vulnerabilities, helping beginners understand how these concepts
+            relate to real-world security decisions.
+          </p>
+
+          <a
+            href="https://cyberpands.medium.com/threats-risks-and-vulnerabilities-explained-159916b13f13"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+        <article class="blog-card" data-category="fund-commonattack">
+          <h2>Common Cyber Attacks and Defense Strategies</h2>
+
+          <div class="blog-meta">
+            Fundamentals · Security Awareness
+          </div>
+
+          <p class="blog-summary">
+            An overview of commonly observed cyber attacks and the basic defense
+            strategies used to mitigate them in real environments.
+          </p>
+
+          <ul class="blog-takeaways">
+            <li>Most attacks exploit known weaknesses</li>
+            <li>Layered defenses reduce overall risk</li>
+            <li>Awareness plays a critical role in prevention</li>
+          </ul>
+
+          <a
+            href="https://cyberpands.medium.com/common-cyber-attacks-and-defense-strategies-e8f598dc6ac7"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+        <article class="blog-card" data-category="fund-cybegin">
+          <h2>Cyber Security for Beginners</h2>
+
+          <div class="blog-meta">
+            Fundamentals · Beginner Guide
+          </div>
+
+          <p class="blog-summary">
+            A beginner-friendly introduction to cybersecurity, covering essential
+            concepts, common threats, and why security matters in everyday digital life.
+          </p>
+
+          <a
+            href="https://cyberpands.medium.com/cyber-security-for-beginners-by-cyberpands-72c82805d841"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+        <article class="blog-card" data-category="soc-siem">
+          <h2>
+            Building a Security Monitoring Lab with Wazuh on Mac
+          </h2>
+
+          <div class="blog-meta">
+            SOC & Blue Team · Wazuh Lab
+          </div>
+
+          <p class="blog-summary">
+            A hands-on walkthrough of building a security monitoring lab using Wazuh,
+            documenting the transition from theoretical understanding to practical
+            SOC-style monitoring and investigation.
+          </p>
+
+          <ul class="blog-takeaways">
+            <li>Designed a hybrid monitoring lab using cloud and local resources</li>
+            <li>Worked with real authentication and system logs across platforms</li>
+            <li>Gained practical insight into alerting, visibility, and detection tuning</li>
+          </ul>
+
+          <a
+            href="https://cyberpands.medium.com/building-a-security-monitoring-lab-with-wazuh-on-mac-a-journey-from-theory-to-practice-6834c48e8f89"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full article on Medium →
+          </a>
+        </article>
+
+      </div>
+    </main>
+
+  </div>
+
+  <footer>
+    © 2026 CyberPands
+  </footer>
+
+  <script src="js/include.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
