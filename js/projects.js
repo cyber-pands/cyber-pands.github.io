@@ -72,9 +72,9 @@ nts_recon: {
       <li>Simplified repetitive reconnaissance steps into a single command-line execution</li>
     </ul>
   `,
-  github: "https://github.com/cyber-pands/Simple_Auto_Recon_Tool-main"
+  link: "https://github.com/cyber-pands/Simple_Auto_Recon_Tool-main"
 },
-waf_lab: {
+webapp_waf: {
   title: "Web Application Firewall Lab with ModSecurity and OWASP CRS",
   tags: ["Web Security", "WAF", "Blue Team", "Application Security", "SOC"],
   language: "Nginx / PHP",
