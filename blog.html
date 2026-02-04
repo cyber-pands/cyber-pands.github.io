@@ -42,6 +42,7 @@
       <div class="sidebar-group">
         <div class="group-title" onclick="toggleGroup(this)">Web Security</div>
         <ul class="group-items">
+          <li onclick="filterBlogs('web-waf')">Breaking and Understanding WAFs</li>
           <li onclick="filterBlogs('web-injection')">Injection Attacks</li>
           <li onclick="filterBlogs('web-crypto')">Cryptographic Failure</li>
           <li onclick="filterBlogs('web-brokenaccess')">Broken Access Control</li>
@@ -69,6 +70,34 @@
 
       <!-- BLOG LIST -->
       <div class="blog-list">
+
+        <article class="blog-card" data-category="web-waf">
+          <h2>Building and Breaking a Web Application Firewall</h2>
+
+          <div class="blog-meta">
+            Web Security · Blue Team · WAF
+          </div>
+
+          <p class="blog-summary">
+            A hands-on two-part project documenting the design, deployment, and analysis
+            of a Web Application Firewall using Nginx, ModSecurity, and OWASP Core Rule Set,
+            with real attack simulations and log-driven investigation.
+          </p>
+
+          <ul class="blog-takeaways">
+            <li>How Web Application Firewalls inspect and evaluate HTTP traffic</li>
+            <li>How ModSecurity and OWASP CRS detect XSS, SQLi, and file inclusion attacks</li>
+            <li>How anomaly scoring and rule evaluation drive blocking decisions</li>
+          </ul>
+
+          <a
+            href="https://medium.com/@cyberpands/inside-a-web-application-firewall-understanding-modsecurity-owasp-crs-and-waf-decision-making-96bd5590cf71"
+            target="_blank"
+            class="medium-btn"
+          >
+            Read full series on Medium →
+          </a>
+        </article>
 
         <article class="blog-card" data-category="web-injection">
           <h2>The Danger Lurking Within: Understanding Injection Attacks</h2>
