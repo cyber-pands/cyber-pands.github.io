@@ -15,7 +15,7 @@ const projects = {
       <li>Designed the tool with a modular architecture for maintainability</li>
     </ul>
   `,
-  github: "https://github.com/cyber-pands/PCAP-Threat-Hunter"
+  link: "https://github.com/cyber-pands/PCAP-Threat-Hunter"
 },
 
   siem_wazuh: {
@@ -34,7 +34,7 @@ const projects = {
       <li>Gained practical experience balancing cloud infrastructure with local testing environments</li>
     </ul>
   `,
-  github: "https://pands.notion.site/Building-a-Wazuh-SIEM-Lab-on-Mac-From-Setup-to-Security-Monitoring-1e5f18c9293a802584fbd4978c846eaa#1e5f18c9293a80898f64e65722057416"
+  link: "https://pands.notion.site/Building-a-Wazuh-SIEM-Lab-on-Mac-From-Setup-to-Security-Monitoring-1e5f18c9293a802584fbd4978c846eaa#1e5f18c9293a80898f64e65722057416"
 },
 endps_secureguard: {
   title: "SecureGuard",
@@ -53,7 +53,7 @@ endps_secureguard: {
       <li>Designed the tool with modular functions for maintainability and extensibility</li>
     </ul>
   `,
-  github: "https://github.com/cyber-pands/Secure_Guard"
+  link: "https://github.com/cyber-pands/Secure_Guard"
 },
 nts_recon: {
   title: "Simple Auto Recon",
@@ -73,6 +73,25 @@ nts_recon: {
     </ul>
   `,
   github: "https://github.com/cyber-pands/Simple_Auto_Recon_Tool-main"
+},
+waf_lab: {
+  title: "Web Application Firewall Lab with ModSecurity and OWASP CRS",
+  tags: ["Web Security", "WAF", "Blue Team", "Application Security", "SOC"],
+  language: "Nginx / PHP",
+  description:
+    "A hands-on Web Application Firewall lab built using Nginx, ModSecurity v3, and OWASP Core Rule Set to understand application-layer attack detection, anomaly scoring, and enforcement.",
+  summary: `
+    <ul>
+      <li>Deployed a Web Application Firewall using Nginx integrated with ModSecurity and OWASP Core Rule Set</li>
+      <li>Designed and hosted an intentionally vulnerable PHP application to safely simulate real-world web attacks</li>
+      <li>Tested common attack vectors including cross-site scripting (XSS), SQL injection (SQLi), and local file inclusion (LFI)</li>
+      <li>Analyzed ModSecurity audit logs to understand rule triggering, severity levels, anomaly scoring, and blocking decisions</li>
+      <li>Observed and validated HTTP 403 enforcement based on cumulative risk rather than single-rule matches</li>
+      <li>Focused on log-driven analysis to interpret WAF alerts from a SOC analyst perspective</li>
+      <li>Extended prior SIEM and endpoint monitoring experience by adding application-layer security visibility</li>
+    </ul>
+  `,
+  link: "https://medium.com/@cyberpands/inside-a-web-application-firewall-understanding-modsecurity-owasp-crs-and-waf-decision-making-96bd5590cf71"
 }
 };
 
@@ -109,7 +128,7 @@ function loadProject(key) {
 
     <a
       class="project-link"
-      href="${project.github}"
+      href="${project.link}"
       target="_blank"
       rel="noopener"
     >
